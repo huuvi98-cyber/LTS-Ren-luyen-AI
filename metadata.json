@@ -1,0 +1,6 @@
+{
+  "name": "Rèn Năng Lực AI Từ Phổ Thông - Báo Sài Gòn Giải Phóng",
+  "description": "Trình bày đồ họa đa phương tiện tuyến bài Báo Sài Gòn Giải Phóng: Rèn năng lực AI từ phổ thông với hiệu ứng đồ họa nhẹ AI và giáo dục.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
