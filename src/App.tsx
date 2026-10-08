@@ -15,30 +15,50 @@ export default function App() {
       <NeuralEducationCanvas intensity="gentle" />
 
       {/* Main clean text container */}
-      <main className="relative z-10 w-full max-w-[700px] mx-auto my-auto py-2 flex flex-col items-center">
+      <main className="relative z-10 w-full max-w-[750px] mx-auto my-auto py-2 flex flex-col items-center">
         {/* Animated Kid-friendly Icons: Clear Máy vi tính, Chú Robot AI & iPad */}
         <AiEducationIllustration />
 
-        {/* Verbatim Article Text: Bề ngang cụm chữ 700px, font tròn cho học sinh/trẻ em, chữ to hơn xíu */}
-        <article className="w-full max-w-[700px] font-rounded font-medium text-[17.5px] sm:text-[18.5px] leading-[1.8] text-stone-800 text-justify sm:text-left mt-3">
+        {/* Verbatim Article Text: Bề ngang cụm chữ 750px, font tròn dày hơn xíu, bold “Rèn năng lực AI từ phổ thông” */}
+        <article className="w-full max-w-[750px] font-rounded font-semibold text-[17.5px] sm:text-[18.5px] leading-[1.8] text-stone-850 text-justify sm:text-left mt-3">
           <p>
-            {VERBATIM_SENTENCES.map((item, index) => (
-              <span key={item.id}>
-                {index === 0 ? (
-                  <>
+            {VERBATIM_SENTENCES.map((item, index) => {
+              // Special bolding for “Rèn năng lực AI từ phổ thông”
+              if (item.text.includes('“Rèn năng lực AI từ phổ thông”')) {
+                const parts = item.text.split('“Rèn năng lực AI từ phổ thông”');
+                return (
+                  <span key={item.id}>
+                    {parts[0]}
+                    <strong className="font-extrabold text-stone-950">
+                      “Rèn năng lực AI từ phổ thông”
+                    </strong>
+                    {parts[1]}
+                    {' '}
+                  </span>
+                );
+              }
+
+              if (index === 0) {
+                return (
+                  <span key={item.id}>
                     <strong className="font-bold text-sky-700 mr-1">
                       LTS:
                     </strong>
                     <span>
                       {item.text.replace(/^LTS:\s*/, '')}
                     </span>
-                  </>
-                ) : (
-                  <span>{item.text}</span>
-                )}
-                {' '}
-              </span>
-            ))}
+                    {' '}
+                  </span>
+                );
+              }
+
+              return (
+                <span key={item.id}>
+                  {item.text}
+                  {' '}
+                </span>
+              );
+            })}
           </p>
         </article>
       </main>
