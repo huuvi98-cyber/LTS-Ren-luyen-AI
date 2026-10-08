@@ -19,8 +19,8 @@ export default function App() {
         {/* Animated Kid-friendly Icons: Clear Máy vi tính, Chú Robot AI & iPad */}
         <AiEducationIllustration />
 
-        {/* Verbatim Article Text: Bề ngang cụm chữ 700px, font tròn cho học sinh/trẻ em */}
-        <article className="w-full max-w-[700px] font-rounded font-medium text-[15.5px] sm:text-[16.5px] leading-relaxed text-stone-800 text-justify sm:text-left mt-3">
+        {/* Verbatim Article Text: Bề ngang cụm chữ 700px, font tròn cho học sinh/trẻ em, chữ to hơn xíu */}
+        <article className="w-full max-w-[700px] font-rounded font-medium text-[17.5px] sm:text-[18.5px] leading-[1.8] text-stone-800 text-justify sm:text-left mt-3">
           <p>
             {VERBATIM_SENTENCES.map((item, index) => (
               <span key={item.id}>
