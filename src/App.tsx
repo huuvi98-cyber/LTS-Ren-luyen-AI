@@ -19,8 +19,8 @@ export default function App() {
         {/* Animated Kid-friendly Icons: Clear Máy vi tính, Chú Robot AI & iPad */}
         <AiEducationIllustration />
 
-        {/* Verbatim Article Text: Bề ngang cụm chữ 750px, font tròn dày hơn xíu, bold “Rèn năng lực AI từ phổ thông” */}
-        <article className="w-full max-w-[750px] font-rounded font-semibold text-[17.5px] sm:text-[18.5px] leading-[1.8] text-stone-850 text-justify sm:text-left mt-3">
+        {/* Verbatim Article Text: Bề ngang cụm chữ 750px, font tròn dày hơn, chữ to hơn xíu, khoảng cách dòng gần hơn tí */}
+        <article className="w-full max-w-[750px] font-rounded font-semibold text-[19px] sm:text-[20.5px] leading-[1.58] text-stone-850 text-justify sm:text-left mt-3">
           <p>
             {VERBATIM_SENTENCES.map((item, index) => {
               // Special bolding for “Rèn năng lực AI từ phổ thông”
