@@ -20,14 +20,15 @@ export default function App() {
         <article className="w-full max-w-[750px] font-rounded font-semibold text-[19px] sm:text-[20.5px] leading-[1.58] text-stone-850 text-justify sm:text-left mb-6">
           <p>
             {VERBATIM_SENTENCES.map((item, index) => {
-              // Special bolding for “Rèn năng lực AI từ phổ thông”
-              if (item.text.includes('“Rèn năng lực AI từ phổ thông”')) {
-                const parts = item.text.split('“Rèn năng lực AI từ phổ thông”');
+              // Special bolding for series title phrase
+              const titlePhrase = '“Rèn năng lực, dựng “lá chắn” khi dạy AI cho học sinh”';
+              if (item.text.includes(titlePhrase)) {
+                const parts = item.text.split(titlePhrase);
                 return (
                   <span key={item.id}>
                     {parts[0]}
                     <strong className="font-extrabold text-stone-950">
-                      “Rèn năng lực AI từ phổ thông”
+                      {titlePhrase}
                     </strong>
                     {parts[1]}
                     {' '}
